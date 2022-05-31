@@ -25,4 +25,4 @@ const reducers = combineReducers({
 
 
 
-export const store = createStore(reducers, applyMiddleware(thunk),)
+export const store = createStore(reducers, applyMiddleware(thunk))
