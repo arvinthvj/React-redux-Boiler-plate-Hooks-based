@@ -3,7 +3,7 @@ import { createSlice , createAsyncThunk} from "@reduxjs/toolkit";
 
 
 const fetchTodos = createAsyncThunk("todo/fetchTodosStatus", async () => {
-  const res = await fetch("https://rcz-vam-1.herokuapp.com/api/shopData");
+  const res = await fetch("https://rcz-vam-1.herokuapp.com/api/getregdata?fromCollectionId=thilakrajCollection");
   const todos = await res.json();
   return todos;
 });
@@ -15,7 +15,7 @@ const fetchTodos = createAsyncThunk("todo/fetchTodosStatus", async () => {
 export const dataSlice = createSlice({
   name: "dataFromDataBase",
   initialState: {
-    data: []
+    data: [],
   },
   
   extraReducers: {
